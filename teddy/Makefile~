@@ -1,0 +1,17 @@
+prog : initialisation.c affichage.c deplacement.c scrolling.c stage1.c
+	gcc initialisation.c affichage.c deplacement.c scrolling.c stage1.c -o prog `sdl-config --libs --cflag` -lSDL_mixer -lSDL_image -lm -g -lSDL_ttf -g
+
+initialisation.o : initialisation.c
+	gcc -c initialisation.c
+
+stage1.o : stage1.c
+	gcc -c stage1.c
+
+affichage.o : affichage.c
+	gcc -c affichage.c
+
+deplacement.o : deplacement.c
+	gcc -c deplacement.c
+
+scrolling.o : scrolling.c
+	gcc -c scrolling.c

@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_mixer.h>
+#include "fonction.h"
+
+int main()
+{
+ SDL_Surface tab[30],*screen;
+ SDL_Rect positionbackround,positiondog,positionchar,positionballon;
+ SDL_Init(SDL_INIT_VIDEO);
+ screen=SDL_SetVideoMode(800,600,32,SDL_HWSURFACE|SDL_DOUBLEBUF);
+ init(tab);
+ positionbackround.x=0;
+ positionbackround.y=200;
+ positiondog.x=10;
+ positiondog.y=275;
+ positionballon.x=110;
+ positionballon.y=30;
+ affichageperso(tab[26],screen,positionbackround);
+ affichageperso(tab[14],screen,positiondog);
+ affichageperso(tab[20],screen,positionballon);
+ return 0;
+}

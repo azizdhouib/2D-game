@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_mixer.h>
+#include "fonction.h"
+
+void initialisation_img(SDL_Surface *tab[])
+{
+ SDL_Surface *backround1=NULL,*backround2=NULL;
+ SDL_Surface *dog1=NULL,*dog2=NULL,*dog3=NULL,*dog4=NULL,*dog5=NULL,*dog6=NULL;
+ SDL_Surface *char1=NULL,*char2=NULL,*char3=NULL,*char4=NULL,*char5=NULL,*char6=NULL,*char7=NULL,*char8=NULL;
+ SDL_Surface *bal1=NULL,*bal2=NULL,*bal3=NULL,*bal4=NULL;
+ SDL_Surface *bear1=NULL,*bear2=NULL,*bear3=NULL,*bear4=NULL,*bear5=NULL,*bear6=NULL,*bear7=NULL,*bear8=NULL,*bear9=NULL,*bear10=NULL;
+ dog1=IMG_Load("dog1.png");
+ dog2=IMG_Load("dog2.png");
+ dog3=IMG_Load("dog3.png");
+ dog4=IMG_Load("dog4.png");
+ dog5=IMG_Load("dog5.png");
+ dog6=IMG_Load("dog6.png");
+ char1=IMG_Load("char1.png");
+ char2=IMG_Load("char2.png");
+ char3=IMG_Load("char3.png");
+ char4=IMG_Load("char4.png");
+ char5=IMG_Load("char5.png");
+ char6=IMG_Load("char6.png");
+ char7=IMG_Load("char7.png");
+ char8=IMG_Load("char8.png");
+ bal1=IMG_Load("bal1.png");
+ bal2=IMG_Load("bal2.png");
+ bal3=IMG_Load("bal3.png");
+ bal4=IMG_Load("bal4.png");
+ bear1=IMG_Load("bear0.0.png");
+ bear2=IMG_Load("bear1.0.png");
+ bear3=IMG_Load("bear2.0.png");
+ bear4=IMG_Load("bear0.1.png");
+ bear5=IMG_Load("bear1.1.png");
+ bear6=IMG_Load("bear2.1.png");
+ bear7=IMG_Load("bearjump1.png");
+ bear8=IMG_Load("bearjump2.png");
+ bear9=IMG_Load("bearjump1.1.png");
+ bear10=IMG_Load("bearjump2.2.png");
+ backround1=IMG_Load("backroundstg1.0.png");
+ backround2=IMG_Load("backroundstg1.1.png");
+ tab[1]=bear1;
+ tab[2]=bear2;
+ tab[3]=bear3;
+ tab[4]=bear4;
+ tab[5]=bear5;
+ tab[6]=bear6;
+ tab[7]=bear7;
+ tab[8]=bear8;
+ tab[9]=char1;
+ tab[10]=char2;
+ tab[11]=char3;
+ tab[12]=char4;
+ tab[13]=char5;
+ tab[14]=char6;
+ tab[15]=char7;
+ tab[16]=char8;
+ tab[17]=dog1;
+ tab[18]=dog2;
+ tab[19]=dog3;
+ tab[20]=dog4;
+ tab[21]=dog5;
+ tab[22]=dog6;
+ tab[24]=bal1;
+ tab[25]=bal2;
+ tab[26]=bal3;
+ tab[27]=bal4;
+ tab[28]=backround1;
+ tab[29]=backround2;
+ tab[30]=bear9;
+ tab[31]=bear10;
+}
+

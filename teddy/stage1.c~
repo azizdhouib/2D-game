@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <SDL/SDL.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_mixer.h>
+#include "fonction.h"
+
+int main()
+{
+ SDL_Surface *tab[31];
+ SDL_Surface *screen=NULL;
+ SDL_Event event;
+ SDL_Init(SDL_INIT_VIDEO);
+ screen=SDL_SetVideoMode(800,600,32,SDL_HWSURFACE|SDL_DOUBLEBUF);
+ initialisation_img(&tab);
+ SDL_Rect posbear,poschar,posdog,posbal,posbackround;
+ posbackround.x=0;
+ posbackround.y=0;
+ posbal.x=110;
+ posbal.y=30;
+ posbear.x=-350;
+ posbear.y=50;
+ affichageperso(tab[28],screen,posbackround);
+ affichageperso(tab[1],screen,posbear);
+ deplacement_clavier(tab,screen,&posbear);
+ int cnt=1;
+ while(cnt)
+ {
+   SDL_PollEvent(&event);
+   switch(event.type)
+   {
+    case SDL_QUIT:
+     cnt=0;
+     break;
+   }
+ }
+ SDL_QUIT;
+}

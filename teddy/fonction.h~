@@ -1,0 +1,9 @@
+#ifndef JEU_H_INCLUDED
+#define JEU_H_INCLUDED
+
+void initialisation_img(SDL_Surface *tab[]);
+void affichageperso(SDL_Surface *perso,SDL_Surface *screen,SDL_Rect position);
+SDL_Surface* scrolling(SDL_Surface *tab[],SDL_Rect posbear);
+void deplacement_clavier(SDL_Surface *tab[],SDL_Surface *screen,SDL_Rect *pos);
+void deplacement_alea_enemies(SDL_Surface *tab[],SDL_Surface *screen,SDL_Rect *pos);
+#endif // JEU_H_INCLUDED
